@@ -1,7 +1,11 @@
+@use "sass:color";
+
 //Colors
 
 $color-primary-dark: hsl(257, 40%, 49%); //violet
 $color-primary-light: hsl(300, 69%, 71%); //soft magenta
+$color-light: #fff;
+$color-primary-very-dark: darken($color-primary-dark, 15%);
 
 //Fonts
 $font-headings: "Poppins", sans-serif;

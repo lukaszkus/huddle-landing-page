@@ -10,4 +10,104 @@
 
 html {
   font-size: 16px;
+  font-family: $font-body;
+}
+
+body {
+  height: 100vh;
+  background-color: $color-primary-dark;
+  background-image: url(../images/bg-mobile.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 35px 40px;
+}
+
+.logo {
+  padding-bottom: 60px;
+  img {
+    width: 120px;
+  }
+}
+
+.main {
+  width: 100%;
+  .hero-img {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+      font-family: $font-headings;
+      font-size: 1.5rem;
+      color: $color-light;
+      text-align: center;
+      padding-top: 55px;
+    }
+    &__txt {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: $color-light;
+      text-align: center;
+      padding: 15px 0 25px 0;
+    }
+    &__cta {
+      text-decoration: none;
+      font-family: $font-headings;
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: $color-primary-dark;
+      background-color: $color-light;
+      padding: 11px 75px;
+      display: inline-block;
+      border-radius: 30px;
+      margin-bottom: 60px;
+      box-shadow: 0 6px 8px $color-primary-very-dark;
+      &:hover {
+        color: $color-light;
+        background-color: $color-primary-light;
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .social {
+    display: flex;
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 2rem;
+      font-size: 1rem;
+      color: $color-light;
+      text-decoration: none;
+      border: 1px solid $color-light;
+      border-radius: 1rem;
+      margin: 0 5px;
+      &:hover {
+        color: $color-primary-light;
+        border-color: $color-primary-light;
+      }
+    }
+  }
+  .attribution {
+    font-size: 0.7rem;
+    padding: 20px 0;
+    color: $color-primary-very-dark;
+    a {
+      color: $color-primary-very-dark;
+    }
+    a:hover {
+      color: $color-primary-light;
+    }
+  }
 }
