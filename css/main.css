@@ -158,17 +158,9 @@ body {
   }
 
   .footer {
-    display: flex;
-    flex-direction: column;
     align-items: flex-end;
   }
-  .footer .social {
-    display: flex;
-  }
   .footer .social a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 2rem;
     height: 2rem;
     font-size: 1rem;
@@ -177,21 +169,6 @@ body {
     border: 1px solid #fff;
     border-radius: 1rem;
     margin: 0 5px;
-  }
-  .footer .social a:hover {
-    color: #e882e8;
-    border-color: #e882e8;
-  }
-  .footer .attribution {
-    font-size: 0.7rem;
-    padding: 20px 0;
-    color: #483479;
-  }
-  .footer .attribution a {
-    color: #483479;
-  }
-  .footer .attribution a:hover {
-    color: #e882e8;
   }
 }
 /*# sourceMappingURL=main.css.map */
