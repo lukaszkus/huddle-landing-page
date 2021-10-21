@@ -14,16 +14,22 @@ html {
 }
 
 body {
+  width: 100%;
   height: 100%;
   background-color: $color-primary-dark;
   background-image: url(../images/bg-mobile.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  padding: 35px 40px;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .logo {
-  padding-bottom: 60px;
+  padding: 35px 0 60px 0;
   img {
     width: 120px;
   }
@@ -113,20 +119,70 @@ body {
 }
 
 @include tablet {
-  body {
-    width: 100%;
-    min-height: 100vh;
-    background-image: url(../images/bg-desktop.svg);
-    padding: 60px 80px;
+  .container {
+    padding: 0 80px;
   }
   .logo {
-    padding-bottom: 75px;
+    padding: 45px 0 65px 0;
+    img {
+      width: 160px;
+    }
+  }
+  .main {
+    .content {
+      align-items: center;
+      &__title {
+        text-align: center;
+        font-size: 2.5rem;
+        padding-top: 2.5rem;
+      }
+      &__txt {
+        text-align: center;
+        font-size: 1.125rem;
+        line-height: 1.6;
+        padding: 20px 0 25px 0;
+      }
+      &__cta {
+        font-size: 1rem;
+        padding: 15px 65px;
+      }
+    }
+  }
+  .footer {
+    align-items: center;
+    padding-bottom: 20px;
+    .social {
+      a {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.2rem;
+        border-radius: 1.5rem;
+        margin: 15px 8px;
+      }
+    }
+    .attribution {
+      padding: 0;
+    }
+  }
+}
+
+@include desktop {
+  body {
+    height: 100vh;
+    background-image: url(../images/bg-desktop.svg);
+    background-size: cover;
+    background-position: top center;
+  }
+  .container {
+    padding: 0 40px;
+  }
+  .logo {
+    padding: 60px 0 75px 0;
     img {
       width: 210px;
     }
   }
   .main {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     .hero-img {
@@ -137,38 +193,13 @@ body {
       align-items: flex-start;
       &__title {
         text-align: start;
-        font-size: 2.5rem;
-        padding-top: 40px;
       }
       &__txt {
         text-align: start;
-        font-size: 1.125rem;
-        line-height: 1.6;
-        padding: 20px 0 25px 0;
-      }
-      &__cta {
-        font-size: 1rem;
-        padding: 15px 65px;
-        display: inline-block;
-        border-radius: 30px;
-        margin-bottom: 60px;
-        box-shadow: 0 6px 8px $color-primary-very-dark;
       }
     }
   }
   .footer {
     align-items: flex-end;
-    .social {
-      a {
-        width: 2rem;
-        height: 2rem;
-        font-size: 1rem;
-        color: $color-light;
-        text-decoration: none;
-        border: 1px solid $color-light;
-        border-radius: 1rem;
-        margin: 0 5px;
-      }
-    }
   }
 }
